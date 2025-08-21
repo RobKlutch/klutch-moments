@@ -1,8 +1,75 @@
+/* Tailwind (keep these at the top) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body { background: #0B0F14; color: #E5E7EB; font-family: sans-serif; }
-.container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
-h1 { font-size: 2.5rem; font-weight: 800; }
-h2 { font-size: 1.2rem; font-weight: 500; color: #9CA3AF; }
+/* Base reset + light theme */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: #ffffff;   /* White background */
+  color: #111827;              /* Slate-900 text */
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page wrapper helper (you’re already using .container) */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.25rem;          /* ~36px */
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0.75rem 0 0.5rem;
+  color: #0f172a;              /* Slate-900 */
+}
+
+h2 {
+  font-size: 1.25rem;          /* ~20px */
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #334155;              /* Slate-700 */
+}
+
+p {
+  margin: 0.5rem 0 0;
+  color: #1f2937;              /* Gray-800 */
+}
+
+/* Links */
+a {
+  color: #0ea5e9;              /* Sky-500 */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons (basic polish for <button> without Tailwind classes) */
+button {
+  appearance: none;
+  border: 1px solid #e5e7eb;   /* Gray-200 */
+  background-color: #111827;   /* Slate-900 */
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease, box-shadow 120ms ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+button:hover { opacity: 0.95; }
+button:active { transform: translateY(1px); }
+
+/* Images */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Utility: full-height main area if you want a white canvas edge-to-edge */
+main { min-height: 100vh; }
