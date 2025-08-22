@@ -6,22 +6,10 @@ const ShowcaseCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   
   const demos = [
-    {
-      sport: "Soccer",
-      thumbnail: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop&crop=center",
-      caption: "Perfect goal spotlight"
-    },
-    {
-      sport: "Basketball",
-      thumbnail: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop&crop=center",
-      caption: "Game-winning shot"
-    },
-    {
-      sport: "Hockey",
-      thumbnail: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center",
-      caption: "Amazing save"
-    }
-  ]
+  { sport: "Soccer",     thumbnail: "/images/pic1.jpg", caption: "Perfect Goal Spotlight" },
+  { sport: "Volleyball", thumbnail: "/images/pic2.jpg", caption: "Perfect Serve" },
+  { sport: "Hockey",     thumbnail: "/images/pic3.jpg", caption: "Game Winning Shot " },
+];
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % demos.length)
