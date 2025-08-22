@@ -4,3 +4,15 @@ dist
 .DS_Store
 
 .next
+dist
+node_modules
+.DS_Store
+.env
+.env.*
+.next
+.next/*
+app/
+pages/
+next.config.* 
+next-env.d.ts
+tsconfig.json
