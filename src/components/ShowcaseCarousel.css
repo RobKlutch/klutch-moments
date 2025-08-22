@@ -1,0 +1,144 @@
+.showcase {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.carousel-btn {
+  background-color: var(--spotlight-yellow);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--black);
+}
+
+.carousel-btn:hover {
+  background-color: var(--white);
+  transform: scale(1.1);
+}
+
+.carousel-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.demo-video {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.demo-video img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.spotlight-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(0, 0, 0, 0.7) 70%);
+  pointer-events: none;
+}
+
+.spotlight-beam {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 3px solid var(--spotlight-yellow);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.demo-caption h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.demo-caption p {
+  color: var(--gray-600);
+  font-size: 16px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--gray-600);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: var(--spotlight-yellow);
+}
+
+.showcase-cta {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .demo-video img {
+    height: 200px;
+  }
+  
+  .demo-caption h3 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,126 @@
+.social-proof {
+  background: linear-gradient(135deg, rgba(255, 214, 10, 0.1) 0%, rgba(0, 0, 0, 1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-proof-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  gap: 60px;
+}
+
+.athlete-silhouette {
+  flex-shrink: 0;
+}
+
+.athlete-silhouette img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.7;
+}
+
+.social-proof-text {
+  flex: 1;
+  text-align: center;
+}
+
+.social-proof-text .section-title {
+  margin-bottom: 20px;
+  font-size: 42px;
+}
+
+.social-platforms {
+  font-size: 24px;
+  color: var(--spotlight-yellow);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.coming-soon {
+  text-align: center;
+}
+
+.coming-soon-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.showcase-placeholder {
+  aspect-ratio: 9/16;
+  background-color: var(--gray-600);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.showcase-placeholder:hover {
+  opacity: 0.7;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: var(--white);
+}
+
+.placeholder-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.placeholder-content p {
+  font-size: 14px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .social-proof-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .athlete-silhouette img {
+    width: 200px;
+    height: 300px;
+  }
+  
+  .social-proof-text .section-title {
+    font-size: 32px;
+  }
+  
+  .social-platforms {
+    font-size: 20px;
+  }
+  
+  .coming-soon-title {
+    font-size: 28px;
+  }
+  
+  .showcase-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
